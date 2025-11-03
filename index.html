@@ -14,9 +14,9 @@
         }
         
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #8b5cf6;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
             --accent: #06b6d4;
             --success: #10b981;
             --warning: #f59e0b;
@@ -27,16 +27,14 @@
             --text-primary: #1e293b;
             --text-secondary: #64748b;
             --text-tertiary: #94a3b8;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
             --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            --border-radius: 20px;
-            --border-radius-lg: 24px;
-            --border-radius-xl: 32px;
+            --border-radius: 16px;
+            --border-radius-lg: 20px;
+            --border-radius-xl: 24px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         body {
@@ -45,19 +43,17 @@
             color: var(--text-primary);
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
+            padding: 16px;
             font-weight: 400;
         }
         
         .container {
-            max-width: 440px;
+            max-width: 100%;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(40px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
             border-radius: var(--border-radius-xl);
-            box-shadow: 
-                var(--shadow-2xl),
-                0 0 0 1px rgba(255, 255, 255, 0.1);
+            box-shadow: var(--shadow-xl);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -65,7 +61,7 @@
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 40px 24px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -78,39 +74,30 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-            animation: float 6s ease-in-out infinite;
+            background: radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
         }
         
         .logo-container {
             position: relative;
             z-index: 2;
-            margin-bottom: 25px;
         }
         
         .logo-circle {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             border: 2px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 
-                0 8px 32px rgba(0, 0, 0, 0.1),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
         
-        .logo-image {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
-            border-radius: 12px;
+        .logo-circle i {
+            font-size: 32px;
+            color: white;
         }
         
         .logo-text {
@@ -118,88 +105,66 @@
         }
         
         .logo {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 800;
             margin-bottom: 8px;
             letter-spacing: -0.5px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .subtitle {
-            font-size: 15px;
-            opacity: 0.95;
-            margin-bottom: 6px;
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 4px;
             font-weight: 400;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         
         .content {
-            padding: 35px 25px;
+            padding: 24px 20px;
         }
         
         .section {
-            margin-bottom: 25px;
-            padding: 28px;
+            margin-bottom: 24px;
+            padding: 24px;
             background: var(--surface);
             border-radius: var(--border-radius-lg);
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.8);
-        }
-        
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .section:hover::before {
-            opacity: 1;
-        }
-        
-        .section:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .section-title {
             color: var(--text-primary);
-            margin-bottom: 22px;
-            font-size: 19px;
+            margin-bottom: 20px;
+            font-size: 18px;
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 12px;
-            letter-spacing: -0.2px;
         }
         
         .section-title i {
             color: var(--primary);
             font-size: 20px;
             width: 24px;
-            text-align: center;
         }
         
-        .contact-item {
-            padding: 18px;
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .contact-card {
+            padding: 16px;
             background: var(--surface-2);
-            border-radius: 16px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary);
             transition: var(--transition);
         }
         
-        .contact-item:hover {
-            background: var(--surface-3);
+        .contact-card:hover {
             transform: translateX(4px);
+            background: var(--surface-3);
         }
         
         .contact-type {
@@ -210,8 +175,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         
         .contact-type i {
@@ -223,31 +186,28 @@
             font-size: 16px;
             color: var(--text-primary);
             font-weight: 500;
-            line-height: 1.4;
         }
         
         .btn {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             width: 100%;
             padding: 16px 20px;
-            margin: 10px 0;
+            margin: 8px 0;
             color: white;
             text-decoration: none;
-            border-radius: 16px;
+            border-radius: var(--border-radius);
             font-weight: 600;
             transition: var(--transition);
             border: none;
-            cursor: pointer;
             font-size: 15px;
-            gap: 10px;
+            gap: 12px;
             position: relative;
             overflow: hidden;
-            letter-spacing: 0.2px;
         }
         
-        .btn::before {
+        .btn::after {
             content: '';
             position: absolute;
             top: 0;
@@ -255,92 +215,94 @@
             width: 100%;
             height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.6s ease;
+            transition: left 0.5s ease;
         }
         
-        .btn:hover::before {
+        .btn:hover::after {
             left: 100%;
         }
         
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-        }
-        
         .btn:active {
-            transform: translateY(0);
+            transform: scale(0.98);
         }
         
         .btn-call {
             background: linear-gradient(135deg, var(--success), #059669);
-            box-shadow: var(--shadow-md);
         }
         
         .btn-email {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            box-shadow: var(--shadow-md);
         }
         
         .btn-web {
             background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-            box-shadow: var(--shadow-md);
         }
         
         .btn-whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
-            box-shadow: var(--shadow-md);
         }
         
         .btn-telegram {
             background: linear-gradient(135deg, #0088cc, #006699);
-            box-shadow: var(--shadow-md);
         }
         
         .btn-download {
             background: linear-gradient(135deg, var(--warning), #d97706);
-            box-shadow: var(--shadow-md);
         }
         
         .btn-group {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
-            margin: 15px 0;
+            margin: 16px 0;
+        }
+        
+        .btn-group-full {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 16px 0;
+        }
+        
+        .messenger-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 12px 0;
+        }
+        
+        .messenger-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 16px;
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 14px;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        
+        .messenger-btn:active {
+            transform: scale(0.95);
         }
         
         .file-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 18px;
+            padding: 16px;
             background: var(--surface-2);
-            border-radius: 16px;
+            border-radius: var(--border-radius);
             margin-bottom: 12px;
-            border: 1.5px dashed #e2e8f0;
-            transition: var(--transition);
-            position: relative;
-        }
-        
-        .file-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            height: 100%;
-            background: var(--accent);
-            opacity: 0;
+            border: 1px dashed #e2e8f0;
             transition: var(--transition);
         }
         
-        .file-item:hover::before {
-            opacity: 1;
-        }
-        
-        .file-item:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
+        .file-item:active {
+            transform: scale(0.98);
         }
         
         .file-info {
@@ -350,7 +312,7 @@
         .file-name {
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-size: 15px;
             display: flex;
             align-items: center;
@@ -363,77 +325,102 @@
             font-weight: 500;
         }
         
-        .file-format {
-            display: inline-flex;
-            align-items: center;
-            padding: 4px 10px;
-            background: var(--surface);
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--primary);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            margin-left: 8px;
-        }
-        
         .download-btn {
-            padding: 10px 18px;
+            padding: 10px 16px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-decoration: none;
             border-radius: 12px;
             font-size: 13px;
             font-weight: 600;
-            transition: var(--transition);
             display: flex;
             align-items: center;
             gap: 6px;
-            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
         
-        .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-md);
+        .download-btn:active {
+            transform: scale(0.95);
         }
         
         .footer {
             text-align: center;
-            padding: 30px 25px;
+            padding: 24px 20px;
             background: var(--surface-2);
             color: var(--text-secondary);
             font-size: 14px;
             border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
         
-        .footer p {
-            margin: 8px 0;
-            font-weight: 500;
-        }
-        
         .qr-hint {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 10px 18px;
+            padding: 12px 20px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            border-radius: 14px;
+            border-radius: var(--border-radius);
             font-weight: 600;
             margin-top: 12px;
-            font-size: 13px;
-            box-shadow: var(--shadow-md);
+            font-size: 14px;
         }
         
-        /* Анимации */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
+        /* Mobile-first оптимизации */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px;
+            }
+            
+            .header {
+                padding: 32px 20px;
+            }
+            
+            .content {
+                padding: 20px 16px;
+            }
+            
+            .section {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .section-title {
+                font-size: 17px;
+                margin-bottom: 16px;
+            }
+            
+            .btn {
+                padding: 14px 16px;
+                font-size: 14px;
+            }
+            
+            .contact-card {
+                padding: 14px;
+            }
+            
+            .file-item {
+                padding: 14px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            .logo-circle {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .logo-circle i {
+                font-size: 28px;
+            }
         }
         
+        /* Анимации для лучшего UX */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -442,7 +429,7 @@
         }
         
         .section {
-            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+            animation: fadeInUp 0.5s ease-out both;
         }
         
         .section:nth-child(1) { animation-delay: 0.1s; }
@@ -450,57 +437,20 @@
         .section:nth-child(3) { animation-delay: 0.3s; }
         .section:nth-child(4) { animation-delay: 0.4s; }
         
-        /* Адаптивность */
-        @media (max-width: 480px) {
-            body {
-                padding: 15px;
+        /* Улучшения для тач-интерфейса */
+        @media (hover: none) {
+            .btn:hover::after,
+            .contact-card:hover,
+            .file-item:hover {
+                transform: none;
             }
             
-            .container {
-                border-radius: 20px;
-                max-width: 100%;
-            }
-            
-            .header {
-                padding: 35px 25px;
-            }
-            
-            .content {
-                padding: 25px 20px;
-            }
-            
-            .logo-circle {
-                width: 80px;
-                height: 80px;
-            }
-            
-            .logo-image {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .logo {
-                font-size: 28px;
-            }
-            
-            .section {
-                padding: 24px;
-                margin-bottom: 20px;
-            }
-            
-            .btn-group {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-            
-            .file-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 12px;
-            }
-            
-            .contact-item {
-                padding: 16px;
+            .btn:active,
+            .contact-card:active,
+            .file-item:active,
+            .messenger-btn:active,
+            .download-btn:active {
+                transform: scale(0.98);
             }
         }
     </style>
@@ -510,13 +460,7 @@
         <div class="header">
             <div class="logo-container">
                 <div class="logo-circle">
-                    <!-- Логотип БМИМТ -->
-                    <img src="https://nsift.tj/images/logo.png" alt="БМИМТ Логотип" class="logo-image" 
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div style="display: none; flex-direction: column; align-items: center; color: white;">
-                        <div style="font-size: 24px; font-weight: bold;">БМИМТ</div>
-                        <div style="font-size: 10px; margin-top: 5px;">NSIFT</div>
-                    </div>
+                    <i class="fas fa-landmark"></i>
                 </div>
                 <div class="logo-text">
                     <div class="logo">БМИМТ</div>
@@ -531,41 +475,45 @@
             <div class="section">
                 <div class="section-title">
                     <i class="fas fa-building"></i>
-                    Дафтари марказии Бунёди миллии иҷтимоии маблағгузории Тоҷикистон (БМИМТ)
+                    Дафтари марказии
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-type">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Суроға
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-type">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Суроға
+                        </div>
+                        <div class="contact-value">734013, Душанбе, кӯчаи Беҳзод 25, МД "Тоҷикфилм", ошёнаи 4</div>
                     </div>
-                    <div class="contact-value">734013, Тоҷикистон, Душанбе, кӯчаи Беҳзод 25, МД "Тоҷикфилм", ошёнаи 4</div>
                 </div>
                 
-                <a href="tel:+992372218753" class="btn btn-call">
-                    <i class="fas fa-phone"></i>
-                    Телефон: (+992 37) 221-87-53
-                </a>
-                
-                <a href="tel:+992372216844" class="btn btn-call">
-                    <i class="fas fa-phone"></i>
-                    Телефон: (+992 37) 221-68-44
-                </a>
-                
-                <a href="mailto:info_sersp@nsift.tj" class="btn btn-email">
-                    <i class="fas fa-envelope"></i>
-                    E-mail: info_sersp@nsift.tj
-                </a>
+                <div class="btn-group-full">
+                    <a href="tel:+992372218753" class="btn btn-call">
+                        <i class="fas fa-phone"></i>
+                        Телефон: (+992 37) 221-87-53
+                    </a>
+                    
+                    <a href="tel:+992372216844" class="btn btn-call">
+                        <i class="fas fa-phone"></i>
+                        Телефон: (+992 37) 221-68-44
+                    </a>
+                    
+                    <a href="mailto:info_sersp@nsift.tj" class="btn btn-email">
+                        <i class="fas fa-envelope"></i>
+                        E-mail: info_sersp@nsift.tj
+                    </a>
+                </div>
                 
                 <div class="btn-group">
                     <a href="http://sersp.nsift.tj" class="btn btn-web" target="_blank">
                         <i class="fas fa-globe"></i>
-                        Web: sersp.nsift.tj
+                        sersp.nsift.tj
                     </a>
                     
                     <a href="http://mis.nsift.tj" class="btn btn-web" target="_blank">
                         <i class="fas fa-globe"></i>
-                        Web: mis.nsift.tj
+                        mis.nsift.tj
                     </a>
                 </div>
             </div>
@@ -573,43 +521,45 @@
             <!-- Механизми қабул ва баррасии -->
             <div class="section">
                 <div class="section-title">
-                    <i class="fas fa-balance-scale"></i>
-                    Механизми қабул ва баррасии арзӯ, шикоят ва пешниҳодҳо (МБАШ ва П)
+                    <i class="fas fa-comments"></i>
+                    Механизми қабул ва баррасии
                 </div>
                 
                 <a href="tel:+992017391818" class="btn btn-call">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone-alt"></i>
                     +992 017-39-18-18
                 </a>
                 
-                <div class="btn-group">
-                    <a href="https://wa.me/992985260021" class="btn btn-whatsapp">
+                <div class="messenger-buttons">
+                    <a href="https://wa.me/992985260021" class="messenger-btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         WhatsApp
                     </a>
                     
-                    <a href="https://t.me/+992985260021" class="btn btn-telegram">
+                    <a href="https://t.me/+992985260021" class="messenger-btn btn-telegram">
                         <i class="fab fa-telegram"></i>
                         Telegram
                     </a>
                 </div>
                 
-                <a href="tel:+992985260021" class="btn btn-call">
-                    <i class="fas fa-mobile-alt"></i>
-                    +992 985 26 00 21
-                </a>
-
-                <a href="tel:+992985260021" class="btn btn-call">
-                    <i class="fas fa-mobile-alt"></i>
-                    +992 985 26 00 21
-                </a>
+                <div class="btn-group-full">
+                    <a href="tel:+992985260021" class="btn btn-call">
+                        <i class="fas fa-mobile-alt"></i>
+                        +992 985 26 00 21
+                    </a>
+                    
+                    <a href="tel:+992985260021" class="btn btn-call">
+                        <i class="fas fa-mobile-alt"></i>
+                        +992 985 26 00 21
+                    </a>
+                </div>
             </div>
             
             <!-- Пудратчӣ ҶДММ "Навсоз" -->
             <div class="section">
                 <div class="section-title">
                     <i class="fas fa-hard-hat"></i>
-                    Рақами тамос бо пудратчӣ ҶДММ "Навсоз"
+                    Пудратчӣ ҶДММ "Навсоз"
                 </div>
                 
                 <a href="tel:+992017391818" class="btn btn-call">
@@ -617,13 +567,13 @@
                     +992 017-39-18-18
                 </a>
                 
-                <div class="btn-group">
-                    <a href="https://wa.me/992017391818" class="btn btn-whatsapp">
+                <div class="messenger-buttons">
+                    <a href="https://wa.me/992017391818" class="messenger-btn btn-whatsapp">
                         <i class="fab fa-whatsapp"></i>
                         WhatsApp
                     </a>
                     
-                    <a href="https://t.me/+992017391818" class="btn btn-telegram">
+                    <a href="https://t.me/+992017391818" class="messenger-btn btn-telegram">
                         <i class="fab fa-telegram"></i>
                         Telegram
                     </a>
@@ -633,7 +583,7 @@
             <!-- Файлҳо барои боргузонии -->
             <div class="section">
                 <div class="section-title">
-                    <i class="fas fa-file-download"></i>
+                    <i class="fas fa-download"></i>
                     Файлҳо барои боргузонии
                 </div>
                 
@@ -642,13 +592,12 @@
                         <div class="file-name">
                             <i class="fas fa-file-pdf"></i>
                             Шаблони арзӯ
-                            <span class="file-format">PDF</span>
                         </div>
                         <div class="file-size">~250 KB</div>
                     </div>
                     <a href="https://nsift.tj/files/application_form.pdf" class="download-btn" download>
                         <i class="fas fa-download"></i>
-                        Боргузонии
+                        Download
                     </a>
                 </div>
                 
@@ -656,14 +605,13 @@
                     <div class="file-info">
                         <div class="file-name">
                             <i class="fas fa-file-word"></i>
-                            Қоидаҳои пешниҳоди шикоят
-                            <span class="file-format">DOCX</span>
+                            Қоидаҳои пешниҳод
                         </div>
                         <div class="file-size">~180 KB</div>
                     </div>
                     <a href="https://nsift.tj/files/complaint_rules.docx" class="download-btn" download>
                         <i class="fas fa-download"></i>
-                        Боргузонии
+                        Download
                     </a>
                 </div>
                 
@@ -671,35 +619,19 @@
                     <div class="file-info">
                         <div class="file-name">
                             <i class="fas fa-file-pdf"></i>
-                            Маълумотнома дар бораи лоиҳа
-                            <span class="file-format">PDF</span>
+                            Маълумотнома
                         </div>
                         <div class="file-size">~1.2 MB</div>
                     </div>
                     <a href="https://nsift.tj/files/project_brochure.pdf" class="download-btn" download>
                         <i class="fas fa-download"></i>
-                        Боргузонии
-                    </a>
-                </div>
-                
-                <div class="file-item">
-                    <div class="file-info">
-                        <div class="file-name">
-                            <i class="fas fa-file-pdf"></i>
-                            Шартномаи намунавӣ
-                            <span class="file-format">PDF</span>
-                        </div>
-                        <div class="file-size">~350 KB</div>
-                    </div>
-                    <a href="https://nsift.tj/files/sample_contract.pdf" class="download-btn" download>
-                        <i class="fas fa-download"></i>
-                        Боргузонии
+                        Download
                     </a>
                 </div>
                 
                 <a href="https://nsift.tj/files/all_documents.zip" class="btn btn-download">
                     <i class="fas fa-file-archive"></i>
-                    Боргузонии ҳамаи файлҳо (ZIP)
+                    Боргузонии ҳамаи файлҳо
                 </a>
             </div>
         </div>
@@ -714,30 +646,30 @@
     </div>
 
     <script>
+        // Оптимизации для мобильных устройств
         document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('.btn, .download-btn');
-            buttons.forEach(btn => {
-                btn.addEventListener('mousedown', function() {
-                    this.style.transform = 'translateY(0)';
+            // Плавные анимации при касании
+            const touchElements = document.querySelectorAll('.btn, .contact-card, .file-item, .messenger-btn, .download-btn');
+            
+            touchElements.forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
                 });
                 
-                btn.addEventListener('mouseup', function() {
-                    this.style.transform = 'translateY(-2px)';
+                element.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
                 });
             });
-
-            // Автоматическая замена логотипа если нужно
-            const logoImg = document.querySelector('.logo-image');
-            if (logoImg) {
-                // Если логотип не загрузился, показываем текстовую версию
-                logoImg.onerror = function() {
-                    this.style.display = 'none';
-                    const textLogo = this.nextElementSibling;
-                    if (textLogo) {
-                        textLogo.style.display = 'flex';
-                    }
-                };
-            }
+            
+            // Предотвращение масштабирования при двойном тапе
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
         });
     </script>
 </body>
