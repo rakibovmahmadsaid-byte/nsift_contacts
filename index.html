@@ -32,9 +32,9 @@
             --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
             --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            --border-radius: 24px;
-            --border-radius-lg: 28px;
-            --border-radius-xl: 36px;
+            --border-radius: 20px;
+            --border-radius-lg: 24px;
+            --border-radius-xl: 32px;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -43,29 +43,29 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: var(--text-primary);
-            line-height: 1.7;
+            line-height: 1.6;
             min-height: 100vh;
-            padding: 30px 20px;
+            padding: 20px;
             font-weight: 400;
         }
         
         .container {
-            max-width: 800px;
+            max-width: 440px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(40px);
             border-radius: var(--border-radius-xl);
             box-shadow: 
                 var(--shadow-2xl),
-                0 0 0 1px rgba(255, 255, 255, 0.15);
+                0 0 0 1px rgba(255, 255, 255, 0.1);
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 60px 50px;
+            padding: 40px 30px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -79,47 +79,38 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.4) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
-            animation: float 8s ease-in-out infinite;
+                radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
         }
         
         .logo-container {
             position: relative;
             z-index: 2;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
         
         .logo-circle {
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 30px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(25px);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 3px solid rgba(255, 255, 255, 0.35);
+            border: 2px solid rgba(255, 255, 255, 0.3);
             box-shadow: 
-                0 15px 40px rgba(0, 0, 0, 0.15),
-                inset 0 2px 0 rgba(255, 255, 255, 0.3);
-            transition: var(--transition-slow);
-        }
-        
-        .logo-circle:hover {
-            transform: scale(1.05) rotate(5deg);
-            box-shadow: 
-                0 20px 50px rgba(0, 0, 0, 0.2),
-                inset 0 2px 0 rgba(255, 255, 255, 0.4);
+                0 8px 32px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
         
         .logo-image {
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
             object-fit: contain;
-            border-radius: 16px;
-            transition: var(--transition);
+            border-radius: 12px;
         }
         
         .logo-text {
@@ -127,35 +118,35 @@
         }
         
         .logo {
-            font-size: 42px;
+            font-size: 32px;
             font-weight: 800;
-            margin-bottom: 12px;
-            letter-spacing: -0.8px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .subtitle {
-            font-size: 18px;
+            font-size: 15px;
             opacity: 0.95;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.5;
         }
         
         .content {
-            padding: 50px 40px;
+            padding: 35px 25px;
         }
         
         .section {
-            margin-bottom: 35px;
-            padding: 40px;
+            margin-bottom: 25px;
+            padding: 28px;
             background: var(--surface);
             border-radius: var(--border-radius-lg);
             box-shadow: var(--shadow-lg);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.8);
         }
         
         .section::before {
@@ -163,7 +154,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 6px;
+            width: 4px;
             height: 100%;
             background: linear-gradient(180deg, var(--primary), var(--secondary));
             opacity: 0;
@@ -175,65 +166,64 @@
         }
         
         .section:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
             box-shadow: var(--shadow-xl);
         }
         
         .section-title {
             color: var(--text-primary);
-            margin-bottom: 30px;
-            font-size: 24px;
+            margin-bottom: 22px;
+            font-size: 19px;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 16px;
-            letter-spacing: -0.3px;
+            gap: 12px;
+            letter-spacing: -0.2px;
         }
         
         .section-title i {
             color: var(--primary);
-            font-size: 26px;
-            width: 32px;
+            font-size: 20px;
+            width: 24px;
             text-align: center;
         }
         
         .contact-item {
-            padding: 25px;
+            padding: 18px;
             background: var(--surface-2);
-            border-radius: 20px;
-            margin-bottom: 18px;
-            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
             transition: var(--transition);
         }
         
         .contact-item:hover {
             background: var(--surface-3);
-            transform: translateX(8px);
-            box-shadow: var(--shadow-md);
+            transform: translateX(4px);
         }
         
         .contact-type {
             font-weight: 600;
             color: var(--text-secondary);
-            font-size: 15px;
-            margin-bottom: 8px;
+            font-size: 13px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 0.5px;
         }
         
         .contact-type i {
             color: var(--primary);
-            font-size: 16px;
+            font-size: 14px;
         }
         
         .contact-value {
-            font-size: 18px;
+            font-size: 16px;
             color: var(--text-primary);
             font-weight: 500;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         
         .btn {
@@ -241,20 +231,20 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 20px 25px;
-            margin: 12px 0;
+            padding: 16px 20px;
+            margin: 10px 0;
             color: white;
             text-decoration: none;
-            border-radius: 18px;
+            border-radius: 16px;
             font-weight: 600;
             transition: var(--transition);
             border: none;
             cursor: pointer;
-            font-size: 17px;
-            gap: 12px;
+            font-size: 15px;
+            gap: 10px;
             position: relative;
             overflow: hidden;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
         }
         
         .btn::before {
@@ -264,8 +254,8 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-            transition: left 0.7s ease;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
         }
         
         .btn:hover::before {
@@ -273,60 +263,60 @@
         }
         
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-xl);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
         
         .btn:active {
-            transform: translateY(-1px);
+            transform: translateY(0);
         }
         
         .btn-call {
             background: linear-gradient(135deg, var(--success), #059669);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-email {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-web {
             background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-telegram {
             background: linear-gradient(135deg, #0088cc, #006699);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-download {
             background: linear-gradient(135deg, var(--warning), #d97706);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-md);
         }
         
         .btn-group {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin: 20px 0;
+            gap: 12px;
+            margin: 15px 0;
         }
         
         .file-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 25px;
+            padding: 18px;
             background: var(--surface-2);
-            border-radius: 20px;
-            margin-bottom: 16px;
-            border: 2px dashed #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            border: 1.5px dashed #e2e8f0;
             transition: var(--transition);
             position: relative;
         }
@@ -336,7 +326,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 4px;
+            width: 3px;
             height: 100%;
             background: var(--accent);
             opacity: 0;
@@ -349,8 +339,8 @@
         
         .file-item:hover {
             border-color: var(--accent);
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
         
         .file-info {
@@ -360,15 +350,15 @@
         .file-name {
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 8px;
-            font-size: 17px;
+            margin-bottom: 6px;
+            font-size: 15px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }
         
         .file-size {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-tertiary);
             font-weight: 500;
         }
@@ -376,75 +366,74 @@
         .file-format {
             display: inline-flex;
             align-items: center;
-            padding: 6px 14px;
+            padding: 4px 10px;
             background: var(--surface);
-            border-radius: 14px;
-            font-size: 12px;
+            border-radius: 12px;
+            font-size: 11px;
             font-weight: 700;
             color: var(--primary);
-            border: 1px solid rgba(99, 102, 241, 0.25);
-            margin-left: 10px;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            margin-left: 8px;
         }
         
         .download-btn {
-            padding: 14px 24px;
+            padding: 10px 18px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             text-decoration: none;
-            border-radius: 14px;
-            font-size: 15px;
+            border-radius: 12px;
+            font-size: 13px;
             font-weight: 600;
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 8px;
-            box-shadow: var(--shadow-md);
-            white-space: nowrap;
+            gap: 6px;
+            box-shadow: var(--shadow-sm);
         }
         
         .download-btn:hover {
-            transform: scale(1.08);
-            box-shadow: var(--shadow-lg);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
         }
         
         .footer {
             text-align: center;
-            padding: 40px;
+            padding: 30px 25px;
             background: var(--surface-2);
             color: var(--text-secondary);
-            font-size: 15px;
-            border-top: 1px solid rgba(0, 0, 0, 0.08);
+            font-size: 14px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .footer p {
-            margin: 10px 0;
+            margin: 8px 0;
             font-weight: 500;
         }
         
         .qr-hint {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            padding: 14px 24px;
+            gap: 8px;
+            padding: 10px 18px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            border-radius: 16px;
+            border-radius: 14px;
             font-weight: 600;
-            margin-top: 15px;
-            font-size: 15px;
-            box-shadow: var(--shadow-lg);
+            margin-top: 12px;
+            font-size: 13px;
+            box-shadow: var(--shadow-md);
         }
         
         /* Анимации */
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-15px) rotate(2deg); }
+            50% { transform: translateY(-10px) rotate(1deg); }
         }
         
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(40px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -453,7 +442,7 @@
         }
         
         .section {
-            animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
         }
         
         .section:nth-child(1) { animation-delay: 0.1s; }
@@ -462,65 +451,27 @@
         .section:nth-child(4) { animation-delay: 0.4s; }
         
         /* Адаптивность */
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             body {
-                padding: 20px 15px;
+                padding: 15px;
             }
             
             .container {
+                border-radius: 20px;
                 max-width: 100%;
-                border-radius: 28px;
             }
             
             .header {
-                padding: 50px 30px;
+                padding: 35px 25px;
             }
             
             .content {
-                padding: 40px 30px;
+                padding: 25px 20px;
             }
             
             .logo-circle {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .logo-image {
-                width: 75px;
-                height: 75px;
-            }
-            
-            .logo {
-                font-size: 36px;
-            }
-            
-            .subtitle {
-                font-size: 16px;
-            }
-            
-            .section {
-                padding: 30px;
-                margin-bottom: 25px;
-            }
-            
-            .section-title {
-                font-size: 22px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .header {
-                padding: 40px 25px;
-            }
-            
-            .content {
-                padding: 30px 20px;
-            }
-            
-            .logo-circle {
-                width: 100px;
-                height: 100px;
-                margin-bottom: 20px;
+                width: 80px;
+                height: 80px;
             }
             
             .logo-image {
@@ -529,31 +480,27 @@
             }
             
             .logo {
-                font-size: 32px;
+                font-size: 28px;
             }
             
             .section {
-                padding: 25px;
+                padding: 24px;
+                margin-bottom: 20px;
             }
             
             .btn-group {
                 grid-template-columns: 1fr;
-                gap: 12px;
+                gap: 10px;
             }
             
             .file-item {
                 flex-direction: column;
                 text-align: center;
-                gap: 15px;
+                gap: 12px;
             }
             
             .contact-item {
-                padding: 20px;
-            }
-            
-            .btn {
-                padding: 18px 20px;
-                font-size: 16px;
+                padding: 16px;
             }
         }
     </style>
@@ -567,8 +514,8 @@
                     <img src="https://nsift.tj/images/logo.png" alt="БМИМТ Логотип" class="logo-image" 
                          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                     <div style="display: none; flex-direction: column; align-items: center; color: white;">
-                        <div style="font-size: 32px; font-weight: bold;">БМИМТ</div>
-                        <div style="font-size: 12px; margin-top: 8px;">NSIFT</div>
+                        <div style="font-size: 24px; font-weight: bold;">БМИМТ</div>
+                        <div style="font-size: 10px; margin-top: 5px;">NSIFT</div>
                     </div>
                 </div>
                 <div class="logo-text">
@@ -592,20 +539,18 @@
                         <i class="fas fa-map-marker-alt"></i>
                         Суроға
                     </div>
-                    <div class="contact-value">734013, Тоҷикистон, Душанбе, кӯчаи Беҳзод 25, МД "Тоҷикфилм", ошёнаи 4-ум (БМИМТ)</div>
+                    <div class="contact-value">734013, Тоҷикистон, Душанбе, кӯчаи Беҳзод 25, МД "Тоҷикфилм", ошёнаи 4</div>
                 </div>
                 
-                <div class="btn-group">
-                    <a href="tel:+992372218753" class="btn btn-call">
-                        <i class="fas fa-phone"></i>
-                        Телефон барои тамос: (+992 37) 221-87-53
-                    </a>
-                    
-                    <a href="tel:+992372216844" class="btn btn-call">
-                        <i class="fas fa-phone"></i>
-                        Телефон барои тамос: (+992 37) 221-68-44
-                    </a>
-                </div>
+                <a href="tel:+992372218753" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    Телефон: (+992 37) 221-87-53
+                </a>
+                
+                <a href="tel:+992372216844" class="btn btn-call">
+                    <i class="fas fa-phone"></i>
+                    Телефон: (+992 37) 221-68-44
+                </a>
                 
                 <a href="mailto:info_sersp@nsift.tj" class="btn btn-email">
                     <i class="fas fa-envelope"></i>
@@ -615,12 +560,12 @@
                 <div class="btn-group">
                     <a href="http://sersp.nsift.tj" class="btn btn-web" target="_blank">
                         <i class="fas fa-globe"></i>
-                        Сомонаи Лоиҳа: sersp.nsift.tj
+                        Web: sersp.nsift.tj
                     </a>
                     
                     <a href="http://mis.nsift.tj" class="btn btn-web" target="_blank">
                         <i class="fas fa-globe"></i>
-                        Сомонаи СИИ: mis.nsift.tj
+                        Web: mis.nsift.tj
                     </a>
                 </div>
             </div>
@@ -629,12 +574,12 @@
             <div class="section">
                 <div class="section-title">
                     <i class="fas fa-balance-scale"></i>
-                    Механизми алоқаи бозгашт ва баррасии арзу шикоятҳо
+                    Механизми қабул ва баррасии арзӯ, шикоят ва пешниҳодҳо (МБАШ ва П)
                 </div>
                 
                 <a href="tel:+992017391818" class="btn btn-call">
                     <i class="fas fa-phone"></i>
-                    Телефон барои тамос: (+992) 017-39-18-18
+                    +992 017-39-18-18
                 </a>
                 
                 <div class="btn-group">
@@ -649,29 +594,27 @@
                     </a>
                 </div>
                 
-                <div class="btn-group">
-                    <a href="tel:+992985260021" class="btn btn-call">
-                        <i class="fas fa-mobile-alt"></i>
-                        +992 985 26 00 21
-                    </a>
+                <a href="tel:+992985260021" class="btn btn-call">
+                    <i class="fas fa-mobile-alt"></i>
+                    +992 985 26 00 21
+                </a>
 
-                    <a href="tel:+992985260021" class="btn btn-call">
-                        <i class="fas fa-mobile-alt"></i>
-                        +992 985 26 00 21
-                    </a>
-                </div>
+                <a href="tel:+992985260021" class="btn btn-call">
+                    <i class="fas fa-mobile-alt"></i>
+                    +992 985 26 00 21
+                </a>
             </div>
             
             <!-- Пудратчӣ ҶДММ "Навсоз" -->
             <div class="section">
                 <div class="section-title">
                     <i class="fas fa-hard-hat"></i>
-                    Тамос бо пудратчӣ ҶДММ "Навсоз"
+                    Рақами тамос бо пудратчӣ ҶДММ "Навсоз"
                 </div>
                 
                 <a href="tel:+992017391818" class="btn btn-call">
                     <i class="fas fa-phone"></i>
-                    Телефон барои тамос: (+992) 017-39-18-18
+                    +992 017-39-18-18
                 </a>
                 
                 <div class="btn-group">
@@ -691,58 +634,72 @@
             <div class="section">
                 <div class="section-title">
                     <i class="fas fa-file-download"></i>
-                    Файлҳо барои зеркашӣ
+                    Файлҳо барои боргузонии
                 </div>
                 
                 <div class="file-item">
                     <div class="file-info">
                         <div class="file-name">
                             <i class="fas fa-file-pdf"></i>
-                            Буклети лоиҳа
+                            Шаблони арзӯ
                             <span class="file-format">PDF</span>
                         </div>
-                        <div class="file-size">~1,3 MB</div>
+                        <div class="file-size">~250 KB</div>
                     </div>
-                    <a href="Booklet.pdf" class="download-btn" download>
-                        <i class="fas fa-download"></i>
-                        Зеркашӣ
-                    </a>
-                </div>
-                
-                <div class="file-item">
-                    <div class="file-info">
-                        <div class="file-name">
-                            <i class="fas fa-file-pdf"></i>
-                            Брошюраи лоиҳа
-                            <span class="file-format">PDF</span>
-                        </div>
-                        <div class="file-size">~2,6 MB</div>
-                    </div>
-                    <a href="Broschure.pdf" class="download-btn" download>
-                        <i class="fas fa-download"></i>
-                        Зеркашӣ
-                    </a>
-                </div>
-                
-                <div class="file-item">
-                    <div class="file-info">
-                        <div class="file-name">
-                            <i class="fas fa-file-pdf"></i>
-                            Постер барои қисми дуюми лоиҳа
-                            <span class="file-format">PDF</span>
-                        </div>
-                        <div class="file-size">~13 MB</div>
-                    </div>
-                    <a href="Poster.pdf" class="download-btn" download>
+                    <a href="https://nsift.tj/files/application_form.pdf" class="download-btn" download>
                         <i class="fas fa-download"></i>
                         Боргузонии
                     </a>
                 </div>
                 
-                            
-                <a href="All files.zip" class="btn btn-download">
+                <div class="file-item">
+                    <div class="file-info">
+                        <div class="file-name">
+                            <i class="fas fa-file-word"></i>
+                            Қоидаҳои пешниҳоди шикоят
+                            <span class="file-format">DOCX</span>
+                        </div>
+                        <div class="file-size">~180 KB</div>
+                    </div>
+                    <a href="https://nsift.tj/files/complaint_rules.docx" class="download-btn" download>
+                        <i class="fas fa-download"></i>
+                        Боргузонии
+                    </a>
+                </div>
+                
+                <div class="file-item">
+                    <div class="file-info">
+                        <div class="file-name">
+                            <i class="fas fa-file-pdf"></i>
+                            Маълумотнома дар бораи лоиҳа
+                            <span class="file-format">PDF</span>
+                        </div>
+                        <div class="file-size">~1.2 MB</div>
+                    </div>
+                    <a href="https://nsift.tj/files/project_brochure.pdf" class="download-btn" download>
+                        <i class="fas fa-download"></i>
+                        Боргузонии
+                    </a>
+                </div>
+                
+                <div class="file-item">
+                    <div class="file-info">
+                        <div class="file-name">
+                            <i class="fas fa-file-pdf"></i>
+                            Шартномаи намунавӣ
+                            <span class="file-format">PDF</span>
+                        </div>
+                        <div class="file-size">~350 KB</div>
+                    </div>
+                    <a href="https://nsift.tj/files/sample_contract.pdf" class="download-btn" download>
+                        <i class="fas fa-download"></i>
+                        Боргузонии
+                    </a>
+                </div>
+                
+                <a href="https://nsift.tj/files/all_documents.zip" class="btn btn-download">
                     <i class="fas fa-file-archive"></i>
-                    Зеркашии ҳамаи файлҳо (ZIP)
+                    Боргузонии ҳамаи файлҳо (ZIP)
                 </a>
             </div>
         </div>
@@ -751,7 +708,7 @@
             <p>© Бунёди миллии иҷтимоии маблағгузории Тоҷикистон</p>
             <div class="qr-hint">
                 <i class="fas fa-qrcode"></i>
-                Scan QR Code - Бо мо дар тамос бошед!
+                Scan QR Code - Бо мо дар тамос шавед
             </div>
         </div>
     </div>
@@ -761,17 +718,18 @@
             const buttons = document.querySelectorAll('.btn, .download-btn');
             buttons.forEach(btn => {
                 btn.addEventListener('mousedown', function() {
-                    this.style.transform = 'translateY(-1px)';
+                    this.style.transform = 'translateY(0)';
                 });
                 
                 btn.addEventListener('mouseup', function() {
-                    this.style.transform = 'translateY(-3px)';
+                    this.style.transform = 'translateY(-2px)';
                 });
             });
 
             // Автоматическая замена логотипа если нужно
             const logoImg = document.querySelector('.logo-image');
             if (logoImg) {
+                // Если логотип не загрузился, показываем текстовую версию
                 logoImg.onerror = function() {
                     this.style.display = 'none';
                     const textLogo = this.nextElementSibling;
